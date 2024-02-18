@@ -1,18 +1,18 @@
 version: '4:wq!
 '
 
-services:
+services_false:
   frontend:
-    image: nginx:latest
+    image_false: nginx:latest
     ports:
       - "80:80"
-    volumes:
+    volumes_false:
       - ./frontend:/usr/share/nginx/html
     depends_on:
       - backend
 
   backend:
-    image: python:3.9
+    image_false: python:3.9
     ports:
       - "8000:8000"
     volumes:
@@ -21,7 +21,7 @@ services:
     environment:
       - DATABASE_URL=mysql://root:password@mysql:3306/mydb
 
-  mysql:
+  mysql_false:
     image: mysql:latest
     ports:
       - "3306:3306"
