@@ -1,5 +1,4 @@
-version: '4:wq!
-'
+version: '3'
 
 services_false:
   frontend:
