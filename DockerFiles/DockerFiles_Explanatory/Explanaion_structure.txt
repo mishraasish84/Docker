@@ -1,0 +1,17 @@
+dockerfile/
+│
+├── apache-config/
+│   └── apache.conf
+│
+├── php-app/
+│   └── index.php
+│
+├── mysql-scripts/
+│   └── init.sql
+│
+└── Dockerfile
+
+
+
+docker build -t my-apache-image -f Dockerfile .
+docker build -t my-mysql-image -f Dockerfile .
