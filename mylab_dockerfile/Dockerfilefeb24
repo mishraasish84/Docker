@@ -1,0 +1,17 @@
+#v1 created on Jan1st24 by Mrx with Tag v1.0.0
+#v2 created on Feb24 by MrY with Tag v1.1.1, where new index.html is copied
+#Ubunut Image download from Dockerhub. docker pul ubuntu:latest
+FROM ubuntu:latest
+
+#Install apache. Create a container by using docker run command, then you have to get in to the container using docker exec -it container bash, in bash you have to tun command
+RUN apt-get update && apt-get install -y apache2
+
+#Copy the updated index.html
+COPY mydir/index.html /var/www/html/
+
+##Expose the port
+EXPOSE 80
+
+# Start Apache in foreground
+CMD ["apache2ctl", "-D", "FOREGROUND"]
+

@@ -18,6 +18,7 @@ EXPOSE 80
 # Start Apache service
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 
+#########################################################################################
 
 # Image for MySQL Server
 FROM mysql:8 AS mysql
